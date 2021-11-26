@@ -11,7 +11,31 @@
 
 void main()
 {
-  TMatrix<int> a(5), b(5), c(5);
+    setlocale(LC_ALL, "ru");
+    int size;
+    std::cout << "Введите порядок квадратной матрицы: ";
+    std::cin >> size;
+    TMatrix<int> A(size), B(size), C(size);
+
+    std::cout << "Введите первую матрицу построчно: " << std::endl;
+    std::cin >> A;
+    std::cout << "Первая матрица:" << std::endl;
+    std::cout << A << std::endl;
+
+    std::cout << "Введите вторую матрицу построчно: " << std::endl;
+    std::cin >> B;
+    std::cout << "Вторая матрица:" << std::endl;
+    std::cout << B << std::endl;
+
+    C = A + B;
+    std::cout << "Сумма матриц: " << std::endl;
+    std::cout << C << std::endl;
+
+    C = A - B;
+    std::cout << "Разность матриц: " << std::endl;
+    std::cout << C << std::endl;
+
+  /*TMatrix<int> a(5), b(5), c(5);
   int i, j;
 
   setlocale(LC_ALL, "Russian");
@@ -26,6 +50,6 @@ void main()
   c = a + b;
   cout << "Matrix a = " << endl << a << endl;
   cout << "Matrix b = " << endl << b << endl;
-  cout << "Matrix c = a + b" << endl << c << endl;
+  cout << "Matrix c = a + b" << endl << c << endl;*/
 }
 //---------------------------------------------------------------------------
