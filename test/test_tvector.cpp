@@ -206,3 +206,4 @@ TEST(TVector, can_assign_on_return)
 	TVector<int> C(9);
 
 	ASSERT_ANY_THROW(C = B = A);
+}
